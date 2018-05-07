@@ -1,0 +1,12 @@
+---
+- name: Add Java Oracle repository.
+  apt_repository:
+    repo: 'deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main'
+    state: present
+    update_cache: yes
+
+- name: Install latest version of "Java" and "install-recommends"
+  apt:
+    name: oracle-java8-installer
+    state: latest
+    install_recommends: yes

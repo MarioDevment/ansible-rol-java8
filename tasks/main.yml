@@ -1,0 +1,11 @@
+---
+- name: Include for RedHat
+  include: "RedHat.yml"
+  static: no
+  when: ansible_os_family == 'RedHat'
+
+- name: Include for debian
+  include: "Debian.yml"
+  static: no
+  when: ansible_os_family == 'Debian'
+
